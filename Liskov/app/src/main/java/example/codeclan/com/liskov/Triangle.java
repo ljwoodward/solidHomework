@@ -5,4 +5,16 @@ package example.codeclan.com.liskov;
  */
 
 public class Triangle extends Shape {
+
+    String name;
+
+    public void Triangle() {
+        this.name = "triangle";
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
 }

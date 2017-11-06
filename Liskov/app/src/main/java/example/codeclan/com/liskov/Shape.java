@@ -6,4 +6,11 @@ package example.codeclan.com.liskov;
 
 abstract class Shape {
 
+    public String name;
+
+    abstract String getName();
+
 }
+
+
+

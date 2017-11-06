@@ -6,4 +6,18 @@ package example.codeclan.com.liskov;
 
 class Circle extends Shape {
 
+    String name;
+
+
+    public void Circle(){
+        this.name = "circle";
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+
+
 }

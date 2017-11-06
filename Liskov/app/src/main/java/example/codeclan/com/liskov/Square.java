@@ -5,4 +5,15 @@ package example.codeclan.com.liskov;
  */
 
 public class Square  extends Shape{
+    String name;
+
+    public void Square() {
+        this.name = "square";
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
 }
