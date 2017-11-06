@@ -6,7 +6,7 @@ package example.codeclan.com.interfacesegregation;
 
 import java.util.ArrayList;
 
-public class Bear implements Bearable{
+public abstract class Bear implements Edible{
 
     // The Interface Segregation Principle states that:
     // "No client should be forced to depend on methods it does not use"
@@ -17,15 +17,6 @@ public class Bear implements Bearable{
 
     private ArrayList<Edible> belly = new ArrayList<Edible>();
 
-    // pointless implementation
-    public Seal iceFish(){
-        return null;
-    }
-
-    // pointless implementation
-    public String climbIceberg(){
-        return null;
-    }
 
     public int foodCount(){
         return belly.size();
@@ -33,18 +24,6 @@ public class Bear implements Bearable{
 
     public boolean isBellyFull(){
         return (foodCount() >= 5);
-    }
-
-    public Salmon riverFish(){
-        return new Salmon();
-    }
-
-    public Honey harvestHoney(){
-        return new Honey();
-    }
-
-    public Bamboo harvestBamboo(){
-        return new Bamboo();
     }
 
     public String sleep(){
