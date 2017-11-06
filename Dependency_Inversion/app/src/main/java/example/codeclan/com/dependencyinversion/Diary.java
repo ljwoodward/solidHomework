@@ -6,7 +6,7 @@ package example.codeclan.com.dependencyinversion;
 
 import java.util.ArrayList;
 
-public class Diary{
+public class Diary implements Writeable {
 
     // Diary knows how to create, store and access journal entries.
     // Any class that makes use of Diary doesn't need to be concerned with how this is done.

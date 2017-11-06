@@ -15,11 +15,9 @@ package example.codeclan.com.dependencyinversion;
 // All of that lower-level complexity is abstracted away from you when you use your laptop.
 // The same is true for our Bear and their Diary.
 
-import java.util.ArrayList;
+public class Bear implements Writer {
 
-public class Bear{
-
-    private Diary journal;
+    private Writeable journal;
 
     public Bear(){
         this.journal = new Diary();
@@ -28,7 +26,7 @@ public class Bear{
         // The Bear is stuck with a Diary, but it shouldn't really matter what kind of journal it is, as long as it can .write()
     }
 
-    public Diary getJournal(){
+    public Writeable getJournal(){
         return this.journal;
     }
 
@@ -36,4 +34,8 @@ public class Bear{
         this.journal.write(text);
     }
 
+    @Override
+    public String write() {
+        return null;
+    }
 }
